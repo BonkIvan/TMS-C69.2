@@ -2,10 +2,7 @@ package HomeWork.HW2;
 
 public class ControlStructures {
     public void monthNumber(int monthNumber) {
-
-
-
-    if (monthNumber > 0 && monthNumber < 13) {
+        if (monthNumber > 0 && monthNumber < 13) {
             int x = monthNumber / 3;
             switch (x) {
                 case 0:
@@ -25,20 +22,21 @@ public class ControlStructures {
         } else {
             System.out.println("Неправильный месяц");
         }
-
-    /*  if (num == 12) {
+    }
+    public void season (int numberMonth){
+        if (numberMonth == 12) {
             System.out.println("It's winter");
-        } else if (num < 3) {
+        } else if (numberMonth < 3) {
             System.out.println("It's winter");
-        } else if (num < 6) {
+        } else if (numberMonth < 6) {
             System.out.println("It's spring");
-        } else if (num < 9) {
+        } else if (numberMonth < 9) {
             System.out.println("It's summer");
-        } else if (num < 12) {
+        } else if (numberMonth < 12) {
             System.out.println("It's autum");
-        }else {
+        } else {
             System.out.println("Invalid value");
-        }*/
+        }
 
 /** Четное и нечетное число*/
        /* if(num%2==0){
@@ -52,5 +50,7 @@ public class ControlStructures {
         }else if(num>-20){
             System.out.println("Нормально");
         }else {System.out.println("Холодно");}*/
+
+
     }
 }
