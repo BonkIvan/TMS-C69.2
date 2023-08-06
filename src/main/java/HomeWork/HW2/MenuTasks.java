@@ -3,7 +3,7 @@ package HomeWork.HW2;
 import java.util.Scanner;
 
 public class MenuTasks {
-    int num;
+    short num;
     Scanner scanner = new Scanner(System.in);
     public void controlStructures(){
         ControlStructures controlStructures = new ControlStructures();
@@ -17,7 +17,7 @@ public class MenuTasks {
                         4 - Температура на улице
                         5 - Цвет радуги
                         6 - выход в предыдущее меню\s""");
-                num  = scanner.nextInt();
+                num  = scanner.nextShort();
             switch (num) {
                 case 1 -> {
                     System.out.println("Введите номер месяца: ");
@@ -68,7 +68,7 @@ public class MenuTasks {
                         5 - Первые 10 чисел последовательнсти 0/-5/-10...
                         6 - Программа, выводящая квадраты чисел от 10 до 20 включительно
                         7 - выход в предыдущее меню\s""");
-                num = scanner.nextInt();
+                num = scanner.nextShort();
 
             switch (num) {
                 case 1 -> cycles.evennessNumb();
@@ -98,7 +98,7 @@ public class MenuTasks {
                     2 - Расчет ставки депозита
                     3 - Таблица умнажения (от 1 до 10)
                     4 - выход в предыдущее меню\s""");
-            num = scanner.nextInt();
+            num = scanner.nextShort();
 
             switch (num) {
                 case 1 -> addTasks.numOfFib();

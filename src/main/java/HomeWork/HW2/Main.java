@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         MenuTasks menuTasks = new MenuTasks();
-        int menuItem;
+        short menuItem;
 
         do {
             System.out.println("""
@@ -16,7 +16,7 @@ public class Main {
                     2 - посмотреть задачи по циклам.
                     3 - дополнительные задачи.
                     4 - выход из меню""");
-            menuItem = scanner.nextInt();
+            menuItem = scanner.nextShort();
             switch(menuItem){
                 case 1:
                     menuTasks.controlStructures();
