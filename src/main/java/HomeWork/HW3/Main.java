@@ -7,8 +7,13 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         CreatArrays arr = new CreatArrays();
         ArrayManipulation manipulation = new ArrayManipulation();
-        String[] arrString = arr.arrStringFilling(arr.createStrngArra());
+        String[] arrString =arr.createStrngArra();
+        System.out.println(arrString.length);
+        arrString = arr.arrStringFilling(arrString);
         manipulation.displayStringArray(arrString);
+
+
+
 
 
 

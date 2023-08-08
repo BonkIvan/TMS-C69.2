@@ -73,12 +73,15 @@ public class CreatArrays {
         return arr;
     }
     public String[] arrStringFilling(String arr[]) {
-//
 //        int temp = scanner.nextInt();
-        for (int i = 0; i < arr.length+1; i++) {
-            System.out.println("Введите имя №:" +i);
-            String a = scanner.nextLine();
-            arr[i] = a;
+        String a;
+        int index =0;
+        int size = arr.length;
+        for (int i = 0; i < size; ){
+            if(arr[i]==null)
+           System.out.println("Введите имя №:"+ i);
+            arr[i] = scanner.nextLine();
+            i++;
         }
         return arr;
     }
