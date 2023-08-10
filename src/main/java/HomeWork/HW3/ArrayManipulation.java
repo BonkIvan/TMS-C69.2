@@ -5,7 +5,12 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArrayManipulation {
-    Scanner scanner = new Scanner(System.in);
+    Scanner scanner;
+
+    public ArrayManipulation(Scanner scanner) {
+        this.scanner = scanner;
+    }
+
 
     public void displayArray(int[] arr) {
         for (int num : arr
@@ -31,47 +36,41 @@ public class ArrayManipulation {
     }
 
     public void numAnswer(boolean hasNum) {
-        if (hasNum == true) {
+        if (hasNum) {
             System.out.println(" есть в массиве");
         } else System.out.println(" нет в массиве");
     }
 
+    //TODO rewrite the loop
     public int[] deletInt(int[] arr) {
+
+        boolean hasNumberForRemove = false;
+        int lengthNewArr = 0;
+        int index = 0;
+        int[] newArr = new int[lengthNewArr];
+        do {
         System.out.print("Введите  число которое нужно удалить из массива: ");
         int numToRemove = scanner.nextInt();
-        int[] newArr = new int[arr.length];
-        int ind = 0;
-        boolean hasNum = false;
-        for (int array : arr
-        ) {
-            if (numToRemove == array) {
-                hasNum = true;
-                break;
-            }
-
+        for (int element : arr) {
+            if (element != numToRemove) {
+                lengthNewArr += 1;
+            }else hasNumberForRemove = true;
         }
-        if (hasNum) {
-            System.out.println(numToRemove + " есть в массиве");
-            for (int number :
-                    arr) {
-                if (numToRemove != number) {
-                    newArr[ind] = number;
-                    ind++;
+
+
+        if (hasNumberForRemove) {
+            System.out.println("Число есть в массиве: ");
+            for (int i = 0; i < arr.length; i++) {
+                if (numToRemove != arr[i]) {
+                    newArr[index] = arr[i];
+                    index++;
                 }
 
-            }
-        } else {
-            System.out.println(numToRemove + " нет в массиве");
-            for (int number :
-                    arr) {
-                if (numToRemove != number) {
-                    newArr[ind] = number;
-                    ind++;
-                }
 
             }
 
-        }
+        }else System.out.println("Число в массив не входит");
+        }while(hasNumberForRemove == true);
 
         return newArr;
     }
@@ -102,48 +101,45 @@ public class ArrayManipulation {
         System.out.println("Максимальное число  в массиве:  " + minNum);
     }
 
-    public double average(int[] arr){
+    public double average(int[] arr) {
         double average;
         int sum = 0;
-        for (int num:arr
-             ) { sum = sum +num;
+        for (int num : arr
+        ) {
+            sum = sum + num;
 
         }
-       average = (double) sum / arr.length;
+        average = (double) sum / arr.length;
         return average;
     }
 
-    public void numberComparison(double num1, double num2){
-        if(num1>num2){
+    public void numberComparison(double num1, double num2) {
+        if (num1 > num2) {
             System.out.println("Среднеарифметическое первого массива больше");
 
-        } else if (num1<num2) {
+        } else if (num1 < num2) {
             System.out.println("Среднеарифметическое второго массива больше");
 
-        }else System.out.println("Среднеарифметические массивов равны");
+        } else System.out.println("Среднеарифметические массивов равны");
     }
 
-    public int amountOfEvenNum(int[]arr){
+    public int amountOfEvenNum(int[] arr) {
         int amountNum = 0;
-        for (int num:arr
-             ) { if (num%2==0){
-            amountNum = amountNum+1;
-        }
+        for (int num : arr
+        ) {
+            if (num % 2 == 0) {
+                amountNum = amountNum + 1;
+            }
         }
         return amountNum;
     }
 
-    public int[] replaceOddByZero(int[]arr){
-        int[] arrayWithoutOdd = new int[arr.length];
-        int index = 0;
-        for (int num:arr
-             ) {
-            if (num%2!=1){
-                arrayWithoutOdd[index] = num;
-            } index++;
-
+    public void replaceOddByZero(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 == 1)
+                arr[i] = 0;
         }
-        return arrayWithoutOdd;
+
     }
 
     public void displayStringArray(String[] arr) {
@@ -153,5 +149,37 @@ public class ArrayManipulation {
         }
         System.out.println(" ");
     }
+
+    public void arrStringFilling(String[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println("Введите имя №" + (i + 1) + ": ");
+            arr[i] = scanner.nextLine();
+        }
+    }
+
+    public void arrIntFilling(int[] arr) {
+        System.out.print("Введите диапозон значений:  ");
+        int temp = scanner.nextInt();
+        for (int i = 0; i < arr.length; i++) {
+            int a = (int) (Math.random() * (temp + 1) - (temp / 2));
+            arr[i] = a;
+        }
+
+    }
+
+    public int amountSearchNumber(int[] arr) {
+        System.out.print("Введите число: ");
+        int requiredNumber = scanner.nextInt();
+        int amountNum = 0;
+        for (int num : arr
+        ) {
+            if (requiredNumber == 0) {
+                amountNum = amountNum + 1;
+            }
+        }
+        return amountNum;
+
+    }
+
 
 }

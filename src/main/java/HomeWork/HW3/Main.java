@@ -5,13 +5,28 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        CreatArrays arr = new CreatArrays();
-        ArrayManipulation manipulation = new ArrayManipulation();
-        String[] arrString =arr.createStrngArra();
-        System.out.println(arrString.length);
-        arrString = arr.arrStringFilling(arrString);
-        manipulation.displayStringArray(arrString);
+        CreatArrays arr = new CreatArrays(scanner);
+        ArrayManipulation manipulation = new ArrayManipulation(scanner);
 
+
+        int[] arrInt = arr.creatArr();
+        manipulation.arrIntFilling(arrInt);
+        manipulation.displayArray(arrInt);
+        arrInt = manipulation.deletInt(arrInt);
+        manipulation.displayArray(arrInt);
+        manipulation.replaceOddByZero(arrInt);
+        manipulation.displayArray(arrInt);
+
+
+
+
+
+
+//        String[] arrString =arr.createStringArra();
+//        System.out.println(arrString.length);
+//        manipulation.arrStringFilling(arrString);
+//        System.out.println("в массиве есть следующие имена");
+//         manipulation.displayStringArray(arrString);
 
 
 

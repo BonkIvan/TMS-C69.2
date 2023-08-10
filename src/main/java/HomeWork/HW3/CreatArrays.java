@@ -3,22 +3,16 @@ package HomeWork.HW3;
 import java.util.Scanner;
 
 public class CreatArrays {
-    Scanner scanner = new Scanner(System.in);
+    Scanner scanner;
+
+    public CreatArrays(Scanner scanner) {
+        this.scanner = scanner;
+    }
 
     public int[] creatArr() {
         System.out.print("Введите размер массива:  ");
         int length = scanner.nextInt();
         int arr[] = new int[length];
-        return arr;
-    }
-
-    public int[] arrFilling(int arr[]) {
-        System.out.print("Введите диапозон значений:  ");
-        int temp = scanner.nextInt();
-        for (int i = 0; i < arr.length; i++) {
-            int a = (int) (Math.random() * (temp + 1) - (temp / 2));
-            arr[i] = a;
-        }
         return arr;
     }
 
@@ -31,16 +25,17 @@ public class CreatArrays {
         return arr;
     }
 
+
     public int[] createArrRangFiveToTenElem (){
         int arraySize=0;
-        boolean numInTheRange = false;
+        boolean sizeRange = false;
         System.out.println("Введите размер массива: ");
-        while (!numInTheRange){
+        while (!sizeRange){
             arraySize= scanner.nextInt();
              if (arraySize<5 || 10<arraySize){
                  System.out.println("Неверный диапозон, введите значение от 5 и до 10: ");
-                 numInTheRange = false;
-             }else numInTheRange = true;
+                 sizeRange = false;
+             }else sizeRange = true;
         }
         int arr[] = new int[arraySize];
         for (int i = 0; i < arr.length; i++) {
@@ -50,7 +45,8 @@ public class CreatArrays {
         return arr;
     }
 
-    public int[] arrOfEvenNumFromAnotherArr(int[]arr, int index){
+    //TODO rewrite the loop
+    public int[] createArrOfEvenNumFromAnotherArr(int[]arr, int index){
         int[] anotherArr = new int[index];
         int temp = 0;
         for (int num:arr
@@ -66,24 +62,13 @@ public class CreatArrays {
         return anotherArr;
     }
 
-    public String[] createStrngArra(){
+    public String[] createStringArra(){
         System.out.print("Введите размер массива:  ");
         int length = scanner.nextInt();
-        String arr[] = new String[length];
+        String[] arr = new String[length];
         return arr;
+
     }
-    public String[] arrStringFilling(String arr[]) {
-//        int temp = scanner.nextInt();
-        String a;
-        int index =0;
-        int size = arr.length;
-        for (int i = 0; i < size; ){
-            if(arr[i]==null)
-           System.out.println("Введите имя №:"+ i);
-            arr[i] = scanner.nextLine();
-            i++;
-        }
-        return arr;
-    }
+
 
 }
