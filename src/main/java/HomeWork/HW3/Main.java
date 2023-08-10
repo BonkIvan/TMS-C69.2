@@ -1,21 +1,26 @@
 package HomeWork.HW3;
 
+import HomeWork.HW3.utils.ArrayManipulation;
+import HomeWork.HW3.utils.CreatArrays;
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        CreatArrays arr = new CreatArrays(scanner);
-        ArrayManipulation manipulation = new ArrayManipulation(scanner);
+        Menu menu = new Menu();
 
+        menu.getTasksMenu();
 
-        int[] arrInt = arr.creatArr();
-        manipulation.arrIntFilling(arrInt);
-        manipulation.displayArray(arrInt);
-        arrInt = manipulation.deletInt(arrInt);
-        manipulation.displayArray(arrInt);
-        manipulation.replaceOddByZero(arrInt);
-        manipulation.displayArray(arrInt);
+//        ArrayManipulation manipulation = new ArrayManipulation(scanner);
+//
+//
+//        int[] arrInt = arr.creatArr();
+//        manipulation.arrIntFilling(arrInt);
+//        manipulation.displayArray(arrInt);
+//        arrInt = manipulation.deletInt(arrInt);
+//        manipulation.displayArray(arrInt);
+//        manipulation.replaceOddByZero(arrInt);
+//        manipulation.displayArray(arrInt);
 
 
 

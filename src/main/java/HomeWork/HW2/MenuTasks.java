@@ -3,7 +3,12 @@ import java.util.Scanner;
 
 public class MenuTasks {
     short num;
-    Scanner scanner = new Scanner(System.in);
+    Scanner scanner;
+
+    public MenuTasks(Scanner scanner) {
+        this.scanner = scanner;
+    }
+
     public void controlStructures(){
         ControlStructures controlStructures = new ControlStructures();
         do {

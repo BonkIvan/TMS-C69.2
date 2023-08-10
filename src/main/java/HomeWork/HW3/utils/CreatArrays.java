@@ -1,4 +1,4 @@
-package HomeWork.HW3;
+package HomeWork.HW3.utils;
 
 import java.util.Scanner;
 
@@ -23,6 +23,7 @@ public class CreatArrays {
             arr[i] = a;
         }
         return arr;
+
     }
 
 
@@ -55,7 +56,7 @@ public class CreatArrays {
                  anotherArr[temp]=num;
                  temp = temp +1;
         }
-            
+
         }
 
 

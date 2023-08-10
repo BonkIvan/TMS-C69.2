@@ -1,4 +1,4 @@
-package HomeWork.HW3;
+package HomeWork.HW3.utils;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
@@ -41,21 +41,20 @@ public class ArrayManipulation {
         } else System.out.println(" нет в массиве");
     }
 
-    //TODO rewrite the loop
     public int[] deletInt(int[] arr) {
 
         boolean hasNumberForRemove = false;
-        int lengthNewArr = 0;
         int index = 0;
-        int[] newArr = new int[lengthNewArr];
-        do {
+        int lengthNewArr = 0;
+
         System.out.print("Введите  число которое нужно удалить из массива: ");
         int numToRemove = scanner.nextInt();
         for (int element : arr) {
             if (element != numToRemove) {
                 lengthNewArr += 1;
-            }else hasNumberForRemove = true;
+            } else hasNumberForRemove = true;
         }
+        int[] newArr = new int[lengthNewArr];
 
 
         if (hasNumberForRemove) {
@@ -69,8 +68,8 @@ public class ArrayManipulation {
 
             }
 
-        }else System.out.println("Число в массив не входит");
-        }while(hasNumberForRemove == true);
+        } else System.out.println("Число в массив не входит");
+
 
         return newArr;
     }

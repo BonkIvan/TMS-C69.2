@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
-        MenuTasks menuTasks = new MenuTasks();
+        MenuTasks menuTasks = new MenuTasks(scanner);
         short menuItem;
 
         do {
