@@ -36,6 +36,11 @@ public class Menu {
 
                 }
                 case 2 -> {
+                    int[] arr = creatArrays.creatArr();
+                    manipulation.arrIntFilling(arr);
+                    manipulation.displayArray(arr);
+                    int[] arr2 = manipulation.deletInt(arr);
+                    manipulation.displayArray(arr2);
 
                 }
                 case 3 -> {
