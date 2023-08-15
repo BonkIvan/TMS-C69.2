@@ -175,22 +175,23 @@ public class Main {
 
 
         /** Вторая задача*/
-        /*String[][] chessboard = new String[8][8];
+        String[][] chessboard = new String[8][8];
 
         for (int i = 0; i < chessboard.length; i++) {
+            System.out.println();
             for (int j = 0; j < chessboard[i].length; j++) {
                 if ((i % 2 == 0) && (j % 2 == 0)) {
                     chessboard[i][j] = "W";
                 } else if ((i % 2 == 1) && (j % 2 == 1)) {
                     chessboard[i][j] = "W";
-                }else chessboard[i][j] = "X";
-
+                }else chessboard[i][j] = "B";
+                System.out.print(chessboard[i][j]+ " ");
 
             }
 
         }
 
-        for (int i = 0; i < chessboard.length; i++) {
+        /*for (int i = 0; i < chessboard.length; i++) {
             System.out.println();
             for (int j = 0; j < chessboard[i].length; j++) {
                 System.out.print(chessboard[i][j] + "  ");

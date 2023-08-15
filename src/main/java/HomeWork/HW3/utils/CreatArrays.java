@@ -67,6 +67,7 @@ public class CreatArrays {
         System.out.print("Введите размер массива:  ");
         int length = scanner.nextInt();
         String[] arr = new String[length];
+        scanner.close();
         return arr;
 
     }
