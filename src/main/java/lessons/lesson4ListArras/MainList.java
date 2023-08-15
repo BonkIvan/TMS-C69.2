@@ -1,4 +1,4 @@
-package lessons.lessons4ListArras;
+package lessons.lesson4ListArras;
 
 import java.util.Random;
 import java.util.Scanner;

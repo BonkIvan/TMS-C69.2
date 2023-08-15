@@ -38,7 +38,7 @@ public class Menu {
                     if(manipulation.searchNumber(arr)){
                         System.out.println("Число входит в массив");
                     }else System.out.println("Число не входит в массив");
-                    break;
+
                 }
                 case 2 -> {
                     int[] arr = creatArrays.creatArr();

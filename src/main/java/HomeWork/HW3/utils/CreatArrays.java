@@ -46,7 +46,7 @@ public class CreatArrays {
         return arr;
     }
 
-    //TODO rewrite the loop
+
     public int[] createArrOfEvenNumFromAnotherArr(int[]arr, int index){
         int[] anotherArr = new int[index];
         int temp = 0;
