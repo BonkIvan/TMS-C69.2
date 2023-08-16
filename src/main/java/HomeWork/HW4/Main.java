@@ -175,7 +175,7 @@ public class Main {
 
 
         /** Вторая задача*/
-        String[][] chessboard = new String[8][8];
+        /*String[][] chessboard = new String[8][8];
 
         for (int i = 0; i < chessboard.length; i++) {
             System.out.println();
@@ -189,7 +189,7 @@ public class Main {
 
             }
 
-        }
+        }*/
 
         /*for (int i = 0; i < chessboard.length; i++) {
             System.out.println();
@@ -203,8 +203,7 @@ public class Main {
 
 
         /** Первая задача*/
-/*
-        int[][][] arr = new int[3][3][3];
+       /* int[][][] arr = new int[3][3][3];
         // Заполнение 3х мерного массива
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
@@ -214,7 +213,7 @@ public class Main {
             }
 
         }
-        *//*  Выведение блока массивов в консоль *//*
+        //  Выведение блока массивов в консоль
         for (int i = 0; i < arr.length; i++) {
             System.out.println();
             for (int j = 0; j < arr[i].length; j++) {
@@ -226,7 +225,7 @@ public class Main {
 
 
         }
-        *//*  Прибавления числа к элементам массива *//*
+          //Прибавления числа к элементам массива
         System.out.println("\nВведите число на которое необходимо увеличить элеменыт в массиве: ");
         int num = scanner.nextInt();
         for (int i = 0; i < arr.length; i++) {
@@ -237,7 +236,7 @@ public class Main {
             }
 
         }
-        *//*  Выведение блока массивов в консоль *//*
+         // Выведение блока массивов в консоль
         for (int i = 0; i < arr.length; i++) {
             System.out.println();
             for (int j = 0; j < arr[i].length; j++) {
