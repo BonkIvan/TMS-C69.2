@@ -1,15 +1,37 @@
 package HomeWork.HW5;
 
+import HomeWork.HW5.ATM.ATM;
+
 import java.util.Scanner;
-import HomeWork.HW5.card.CreditCard;
+
 public class Main {
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
 
 
+        ATM atm = new ATM();
+         atm.showTotalMoney();
+        atm.showNumberOfBills();
+       // atm.addMoney(5,3,1);
+        System.out.println();
+        atm.withdrawMoney(scanner.nextInt());
+        atm.showTotalMoney();
+        atm.showNumberOfBills();
+
+/*
+        atm.checkAvailability(scanner.nextInt());
+        atm.showNumberOfBills();
+        atm.showTotalMoney();
+*/
 
 
+
+        /*atm.checkAvailability(scanner.nextInt());
+        atm.showTotalMoney();
+        atm.showNumberOfBills();
+*/
 
 
 
@@ -23,13 +45,8 @@ public class Main {
         computer1.showInfo();*/
 
 
-
-
-
-
-
         /** Задача №1*/
-        Scanner scanner = new Scanner(System.in);
+        /*Scanner scanner = new Scanner(System.in);
         int lastIdCardAccount = 0;
         int numberOfCards = 3;
         CreditCard[] card;
@@ -41,6 +58,9 @@ public class Main {
         }
         for (int i = 0; i < numberOfCards; i++) {
             card[i].showInfo();
+
+        }
+
         card[0].replenish(10.5);
         card[1].replenish(77.2);
         card[2].withdrawal(5.5);
@@ -48,7 +68,7 @@ public class Main {
         for (int i = 0; i < numberOfCards; i++) {
             card[i].showInfo();
 
-        }
+        }*/
 
     }
 

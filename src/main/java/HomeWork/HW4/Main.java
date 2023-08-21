@@ -1,5 +1,7 @@
 package HomeWork.HW4;
 
+import HomeWork.HW4.utils.ArrayTasks;
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -7,6 +9,28 @@ public class Main {
     public static void main(String[] args) {
         Random random = new Random();
         Scanner scanner = new Scanner(System.in);
+        ArrayTasks arrayTasks = new ArrayTasks(scanner, random);
+
+        int[][][] array = arrayTasks.creatAndFillingNewArray();
+        arrayTasks.displayArray(array);
+        arrayTasks.addNumbToArray(array);
+        arrayTasks.displayArray(array);
+
+
+        System.out.println("\nTask2\n");
+        String[][] array2 = arrayTasks.createChessboard();
+       // arrayTasks.displayChessboard(array2);
+        System.out.println("\nTask3\n");
+        arrayTasks.showTaskThree();
+        System.out.println("\nTask4\n");
+        arrayTasks.showTaskFour();
+        System.out.println("\nTask5\n");
+        arrayTasks.showTaskFive();
+        System.out.println("\nTask6\n");
+        arrayTasks.showTaskSix();
+
+
+
 
 
 
