@@ -141,7 +141,7 @@ public class ATM {
             sum = sum -40;
         }
         int hundredsNeeded = sum / 100;
-        int fiftiesNeeded = (sum % 50) / 50;
+        int fiftiesNeeded = sum  / 50;
         int twentiesNeeded = sum / 20;
         if (numberOfBills[0] < twentiesNeeded || numberOfBills[1] < fiftiesNeeded || numberOfBills[2] < hundredsNeeded) {
             System.out.println("Банкомат не может выдать указанную сумму.");
