@@ -1,16 +1,25 @@
 package HomeWork.HW6;
-import HomeWork.HW6.company.Accountant;
-import HomeWork.HW6.company.Director;
-import HomeWork.HW6.company.Worker;
-import HomeWork.HW6.figure.Circle;
-import HomeWork.HW6.figure.Figure;
-import HomeWork.HW6.figure.Rectangle;
-import HomeWork.HW6.figure.Triangle;
+import HomeWork.HW6.documentManagementSystem.DeliveryContracts;
+import HomeWork.HW6.documentManagementSystem.Register;
 
 public class Main {
     public static void main(String[] args) {
+        DeliveryContracts deliveryContracts = new DeliveryContracts("food", 50);
+        DeliveryContracts deliveryContracts1 = new DeliveryContracts("foodы", 40);
+        deliveryContracts.showId();
+        deliveryContracts.showDate();
+       Register register = new Register();
+       // register.showDocement(0);
+        System.out.println(register.toString());
+        register.toString();
 
-        Director director = new Director("Вася");
+
+
+
+/**
+ * Задача2
+ * */
+       /* Director director = new Director("Вася");
         director.getPositionInformation();
         Accountant accountant = new Accountant("Лера");
         accountant.getPositionInformation();
@@ -19,7 +28,7 @@ public class Main {
         Worker worker2 = new Worker("Иван");
         worker2.getPositionInformation();
         Accountant accountant2 = new Accountant("Марина");
-        accountant2.getPositionInformation();
+        accountant2.getPositionInformation();*/
 
 
 

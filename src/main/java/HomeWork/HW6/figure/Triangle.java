@@ -11,16 +11,15 @@ public class Triangle extends Figure {
         this.sideC = sideC;
     }
 
-    @Override
-    public double calculateArea() {
-        double semiPerimeter = (sideA+sideB+sideC)/2;
-        double area = Math.sqrt(semiPerimeter*(semiPerimeter-sideA)*(semiPerimeter-sideB)*(semiPerimeter-sideC));
-        return area;
-    }
 
     @Override
     public double calculatePerimeter() {
 
         return sideA+sideB+sideC;
+    }
+    @Override
+    public double calculateArea() {
+        double semiPerimeter = calculatePerimeter()/2;
+        return  Math.sqrt(semiPerimeter*(semiPerimeter-sideA)*(semiPerimeter-sideB)*(semiPerimeter-sideC));
     }
 }
