@@ -1,6 +1,6 @@
 package HomeWork.HW7.hospital;
 
-public class Dentist extends Doctor{
+public class Dentist extends Doctor {
 
     public Dentist(String name, int age) {
         super(name, age);
@@ -8,7 +8,7 @@ public class Dentist extends Doctor{
 
     @Override
     public void treatPatient(AttendingDoctor plan) {
-        System.out.println(getName() + " Говорит: Открываем рот шире! ");
+        System.out.println("Дантист " + getName() + " говорит: Открываем рот шире! ");
 
     }
 }

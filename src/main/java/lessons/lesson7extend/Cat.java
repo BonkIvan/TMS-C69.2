@@ -1,6 +1,6 @@
 package lessons.lesson7extend;
 
-import org.apache.logging.log4j.Marker;
+
 
 public class Cat {
     int age;

@@ -10,20 +10,30 @@ public class Main {
         Surgeon surgeon = new Surgeon("Васильев Эдуард", 29);
         Dentist dentist = new Dentist("Ермолов Игорь", 55);
 
+        TreatmentPlan treatmentPlan  = new TreatmentPlan(therapist, surgeon , dentist);
+
+
         Patient patient = new Patient("Васин Петр", 29, AttendingDoctor.SURGERY);
         Patient patient2 = new Patient("Гурин Саша", 26);
         Patient patient3 = new Patient("Рокач Игорь", 35, AttendingDoctor.DENTISTRY);
 
-        AttendingDoctor plan = patient.getAttendingDoctor();
-        AttendingDoctor plan2 = patient2.getAttendingDoctor();
-        AttendingDoctor plan3 = patient3.getAttendingDoctor();
 
-        surgeon.treatPatient(plan);
+//        AttendingDoctor plan = patient.getAttendingDoctor();
+//        AttendingDoctor plan2 = patient2.getAttendingDoctor();
+//        AttendingDoctor plan3 = patient3.getAttendingDoctor();
+
+        treatmentPlan.assignDoctor(patient3);
+        treatmentPlan.assignDoctor(patient2);
+        treatmentPlan.assignDoctor(patient);
+
+
+       /* surgeon.treatPatient(plan);
         therapist.treatPatient(plan2);
-        dentist.treatPatient(plan3);
+        dentist.treatPatient(plan3);*/
 
 
-        TreatmentPlan.assignDoctor(patient, surgeon);
+       // TreatmentPlan.assignDoctor(patient);
+
 
 
 

@@ -1,17 +1,25 @@
 package HomeWork.HW6;
 import HomeWork.HW6.documentManagementSystem.DeliveryContracts;
+import HomeWork.HW6.documentManagementSystem.EmployeeContract;
 import HomeWork.HW6.documentManagementSystem.Register;
 
 public class Main {
     public static void main(String[] args) {
-        DeliveryContracts deliveryContracts = new DeliveryContracts("food", 50);
+
+
+        EmployeeContract employeeContract = new EmployeeContract("Вася");
+
+
+
+
+       /* DeliveryContracts deliveryContracts = new DeliveryContracts("food", 50);
         DeliveryContracts deliveryContracts1 = new DeliveryContracts("foodы", 40);
         deliveryContracts.showId();
         deliveryContracts.showDate();
        Register register = new Register();
        // register.showDocement(0);
         System.out.println(register.toString());
-        register.toString();
+        register.toString();*/
 
 
 
