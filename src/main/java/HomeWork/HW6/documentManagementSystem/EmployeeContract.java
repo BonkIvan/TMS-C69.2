@@ -16,7 +16,7 @@ public class EmployeeContract extends Document{
         super();
         this.name = name;
         this.dateOfEmployment = new GregorianCalendar();
-        contractEndDat e= new GregorianCalendar().add( Calendar.YEAR,contractDuration);
+       // contractEndDat e= new GregorianCalendar().add( Calendar.YEAR,contractDuration);
     }
 
     @Override

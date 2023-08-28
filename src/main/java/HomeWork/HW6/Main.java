@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
 
 
-        EmployeeContract employeeContract = new EmployeeContract("Вася");
+      //  EmployeeContract employeeContract = new EmployeeContract("Вася");
 
 
 
