@@ -1,11 +1,16 @@
 package lessons.lesson7extend;
 
 
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
+import java.util.Arrays;
 
 
 public class Main {
-
+    static final Logger rootLogger = LogManager.getRootLogger();
+    static final Logger catLogger = LogManager.getLogger(Cat.class);
     public static void main(String[] args) {
             Cat cat = new Cat(5,"Котя");
 
@@ -35,7 +40,7 @@ public class Main {
         System.out.println(season.name());
         season.toString();
         System.out.println(season.ordinal());
-
+        System.out.println(Arrays.toString(Season.values()));
 
 
 

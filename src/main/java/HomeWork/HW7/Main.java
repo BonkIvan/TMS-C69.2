@@ -12,7 +12,6 @@ public class Main {
 
         TreatmentPlan treatmentPlan  = new TreatmentPlan(therapist, surgeon , dentist);
 
-
         Patient patient = new Patient("Васин Петр", 29, AttendingDoctor.SURGERY);
         Patient patient2 = new Patient("Гурин Саша", 26);
         Patient patient3 = new Patient("Рокач Игорь", 35, AttendingDoctor.DENTISTRY);
