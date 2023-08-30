@@ -6,7 +6,8 @@ public class Therapist extends Doctor{
     }
 
     @Override
-    public void treatPatient() {
+    public void treatPatient(AttendingDoctor plan) {
+        System.out.println(getName()+ " Говорит: Дополнительный осмотр!  ");
 
     }
 }

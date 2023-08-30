@@ -1,6 +1,6 @@
 package HomeWork.HW6.documentManagementSystem;
 
-public class DeliveryContracts extends Document{
+public class DeliveryContracts extends Document implements ShowAllInformation {
     String typeOfProduct;
     int itemQuantity;
 
@@ -17,7 +17,15 @@ public class DeliveryContracts extends Document{
 
     @Override
     public void showId() {
-        System.out.println("id документа: "+idDocument);
+        System.out.println("Номер документа сотрудника - "+idDocument);
 
+    }
+
+    @Override
+    public void showAllInformation() {
+        System.out.println("Номер документа: "+idDocument
+                + "\nДата документа: " +dateOfDocument
+                + "\nТип товара: " + typeOfProduct
+                + "\nКолличествоо товара: " +itemQuantity);
     }
 }

@@ -5,6 +5,6 @@ public abstract class Doctor extends Person{
     public Doctor(String name, int age) {
         super(name, age);
     }
-    public  abstract void treatPatient();
+    public  abstract void treatPatient(AttendingDoctor plan);
 
 }

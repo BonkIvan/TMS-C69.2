@@ -1,17 +1,57 @@
 package HomeWork.HW6;
 import HomeWork.HW6.documentManagementSystem.DeliveryContracts;
+import HomeWork.HW6.documentManagementSystem.EmployeeContract;
+import HomeWork.HW6.documentManagementSystem.FinanceInvoice;
 import HomeWork.HW6.documentManagementSystem.Register;
 
 public class Main {
     public static void main(String[] args) {
-        DeliveryContracts deliveryContracts = new DeliveryContracts("food", 50);
+        Register register = new Register();
+
+        EmployeeContract employeeContract = new EmployeeContract("Вася",5);
+        DeliveryContracts deliveryContracts = new DeliveryContracts("Куклы", 50);
+        FinanceInvoice financeInvoice = new FinanceInvoice(2598.75, 55);
+        DeliveryContracts deliveryContracts2 = new DeliveryContracts("Розы", 500);
+        DeliveryContracts deliveryContracts3 = new DeliveryContracts("Телефоны", 10);
+        DeliveryContracts deliveryContracts4 = new DeliveryContracts("Кружки", 77);
+        FinanceInvoice financeInvoice2 = new FinanceInvoice(22.77, 25);
+        FinanceInvoice financeInvoice3 = new FinanceInvoice(3000, 511);
+        EmployeeContract employeeContract2 = new EmployeeContract("Влад",1);
+        EmployeeContract employeeContract3 = new EmployeeContract("Витя",1);
+        EmployeeContract employeeContract4 = new EmployeeContract("Валера",3);
+
+        /*employeeContract.showDateOfEmployment();
+        employeeContract.showDate();
+        employeeContract.showContractEndDate();
+        employeeContract.showId();*/
+
+
+        register.putDocumet(employeeContract);
+        register.putDocumet(deliveryContracts);
+        register.putDocumet(financeInvoice);
+        register.putDocumet(financeInvoice2);
+        register.putDocumet(financeInvoice3);
+        register.putDocumet(deliveryContracts2);
+        register.putDocumet(deliveryContracts3);
+        register.putDocumet(deliveryContracts4);
+        register.putDocumet(employeeContract2);
+        register.putDocumet(employeeContract3);
+        register.putDocumet(employeeContract4);
+
+        register.showAllDocuments();
+        register.showDocument(1);
+
+
+
+
+       /* DeliveryContracts deliveryContracts = new DeliveryContracts("food", 50);
         DeliveryContracts deliveryContracts1 = new DeliveryContracts("foodы", 40);
         deliveryContracts.showId();
         deliveryContracts.showDate();
        Register register = new Register();
        // register.showDocement(0);
         System.out.println(register.toString());
-        register.toString();
+        register.toString();*/
 
 
 
