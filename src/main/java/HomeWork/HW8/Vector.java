@@ -88,11 +88,11 @@ public class Vector {
         int sumX;
         int sumY;
         if (operation == VectorOperation.ADD) {
-            sumX = vectorXY1[0] + vectorXY2[0];
-            sumY = vectorXY1[1] + vectorXY2[1];
+            sumX = vectorXY1[x] + vectorXY2[x];
+            sumY = vectorXY1[y] + vectorXY2[y];
         } else {
-            sumX = vectorXY1[0] - vectorXY2[0];
-            sumY = vectorXY1[1] - vectorXY2[1];
+            sumX = vectorXY1[x] - vectorXY2[x];
+            sumY = vectorXY1[y] - vectorXY2[y];
         }
         return new int[]{sumX, sumY};
     }
@@ -103,11 +103,11 @@ public class Vector {
         int sumX;
         int sumY;
         if (operation == VectorOperation.ADD) {
-            sumX = vectorAB[0] + vectorCD[0];
-            sumY = vectorAB[1] + vectorCD[1];
+            sumX = vectorAB[x] + vectorCD[x];
+            sumY = vectorAB[y] + vectorCD[y];
         } else {
-            sumX = vectorAB[0] - vectorCD[0];
-            sumY = vectorAB[1] - vectorCD[1];
+            sumX = vectorAB[x] - vectorCD[x];
+            sumY = vectorAB[y] - vectorCD[y];
         }
         return new int[]{sumX, sumY};
     }
