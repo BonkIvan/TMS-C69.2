@@ -97,7 +97,10 @@ public class Vector {
         return new int[]{sumX, sumY};
     }
 
-    public int[] sumVectors(Vector vectorPointA, Vector vectorPointB, Vector vectorPointC, Vector vectorPointD, VectorOperation operation) {
+    public int[] sumVectors(Vector vectorPointA,
+                            Vector vectorPointB,
+                            Vector vectorPointC,
+                            Vector vectorPointD, VectorOperation operation) {
         int[] vectorAB = getVectorXY(vectorPointA, vectorPointB);
         int[] vectorCD = getVectorXY(vectorPointC, vectorPointD);
         int sumX;
