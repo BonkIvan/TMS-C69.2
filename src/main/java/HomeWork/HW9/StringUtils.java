@@ -29,7 +29,7 @@ public class StringUtils {
                 .toString().replace("-", "/").toLowerCase());
     }
 
-    public static void printUpperCaseLetters(String str){
+    public static void printUpperCaseLetters(String str) {
         stringBuffer = new StringBuffer(str);
         System.out.println(stringBuffer.delete(0, 5)
                 .delete(4, 9)
@@ -39,20 +39,33 @@ public class StringUtils {
 
     }
 
-    public static void checkContainSubString(String str){
-        if(str.toUpperCase().matches("(.*)ABC(.*)")){
+    public static void checkContainSubString(String str) {
+        if (str.toUpperCase().matches("(.*)ABC(.*)")) {
             System.out.println("numbDoc has abc ");
-        }else{System.out.println("numbDoc hasn't abc ");}
+        } else {
+            System.out.println("numbDoc hasn't abc ");
+        }
 
        /* if(str.matches("(.*)abc(.*)")==true||str.matches("(.*)ABC(.*)")==true){
             System.out.println("numbDoc has abc ");
         }else {System.out.println("numbDoc hasn't abc ");}*/
     }
 
-    public static void checkStartsWith555String(String str){
-        if(str.startsWith("555")){
-            System.out.println("num starts with 555");
-        }else{System.out.println("num doesn't starts with 555");}
+    public static void checkStartsWith555String(String str) {
+        if (str.startsWith("555")) {
+            System.out.println("The string starts with 555");
+        } else {
+            System.out.println("The string doesn't starts with 555");
+        }
     }
+
+    public static void checkEndWith1a2bString(String str) {
+        if (str.endsWith("1a2b")) {
+            System.out.println("The string ends with 1a2b");
+        } else {
+            System.out.println("The string doesn't ends with 1a2b");
+        }
+    }
+
 
 }
