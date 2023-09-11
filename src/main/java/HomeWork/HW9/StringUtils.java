@@ -67,5 +67,16 @@ public class StringUtils {
         }
     }
 
+    public static String findShortestWord(String text) {
+        String[] words = text.split("\\s+");
+        String shortestWord = words[0];
 
+        for (String word : words) {
+            if (word.length() <= shortestWord.length()) {
+                shortestWord = word;
+            }
+        }
+
+        return shortestWord;
+    }
 }

@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
 
         String replace = "***";
-
+        String txt = "Очень нам люба данная модель, потому как тут все очень просто, есть три варианта изготовления, как и в предыдущем рассматриваемом примере. Но они отличаются по высоте, а не по внешнему виду. Кальян Meduse Nautila Krab — самый маленький вариант, его высота всего 28 см, компактный, стильный и безупречный. Далее идет Meduse Nautila Aurita, которая владеет стандартными размерами и высотой — 50 см. Замыкает семейство Meduse Nautila";
         String numbDoc = "5555-GkM-0659-abc-1a2b";
         String numbDoc2 = DocumentNumberGenerator.generatedDocementNumber();
         StringBuilder stringBuilder = new StringBuilder(numbDoc);
@@ -36,9 +36,13 @@ public class Main {
         StringUtils.checkStartsWith555String(numbDoc2);
         StringUtils.checkEndWith1a2bString(numbDoc2);
 
+        numbDoc.split("//s+");
+        String [] words = txt.split("//s+");
+        String shortestWord = words[0];
 
+        System.out.println(StringUtils.findShortestWord(txt));
 
-
+       StringUtils.findShortestWord(txt);
 
     }
 }
