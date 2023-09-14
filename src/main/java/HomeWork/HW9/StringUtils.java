@@ -1,10 +1,16 @@
 package HomeWork.HW9;
 
+import java.util.Objects;
+
 public class StringUtils {
     private static String replace = "***";
     String str;
     private static StringBuffer stringBuffer;
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(str);
+    }
 
     public static void printFirstTwoBlocks(String str) {
         stringBuffer = new StringBuffer(str);

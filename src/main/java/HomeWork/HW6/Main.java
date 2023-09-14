@@ -39,7 +39,7 @@ public class Main {
         register.putDocumet(employeeContract4);
 
         register.showAllDocuments();
-        register.showDocument(1);
+        register.showDocument(2);
 
 
 
