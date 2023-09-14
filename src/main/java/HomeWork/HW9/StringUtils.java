@@ -39,7 +39,8 @@ public class StringUtils {
 
     }
 
-    public static void checkContainSubString(String str) {
+    public static void checkContainSubString(String str) throws StringException {
+        if (str==null) throw new StringException("The string can't be null ");
         if (str.toUpperCase().matches("(.*)ABC(.*)")) {
             System.out.println("numbDoc has abc ");
         } else {
