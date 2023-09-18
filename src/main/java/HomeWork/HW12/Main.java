@@ -2,6 +2,7 @@ package HomeWork.HW12;
 
 import HomeWork.HW12.Utils.CheckDocNumb;
 import HomeWork.HW12.Utils.ReaderStream;
+import HomeWork.HW12.Utils.WriteStream;
 
 import java.io.*;
 import java.util.Scanner;
@@ -12,11 +13,12 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String path = "C:\\";
         StringBuilder stringBuilder;
-        CheckDocNumb checkDocNumb = new CheckDocNumb();
-        String[][] checkNumbArr;
+        CheckDocNumb checkedDocNumb = new CheckDocNumb();
+        String[][] checkedNumbArr;
+        WriteStream writeStream = new WriteStream();
 
         try {
-            File docFile = new File("E:\\Document.txt");
+            File docFile = new File("C:\\Users\\Admin\\Desktop\\Document.txt");
             System.out.println(docFile.isFile());
             FileReader fileReader = new FileReader(docFile);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
@@ -26,12 +28,12 @@ public class Main {
             System.out.println(readerStream.sizeBufferReade(bufferedReader));
             System.out.println(readerStream.countLinesInBufferedReader(bufferedReader));
 
-            checkDocNumb.validationNumbDocCheck(readerStream.bufferedReaderToStringArray(bufferedReader));
+            checkedDocNumb.validationNumbDocCheck(readerStream.bufferedReaderToStringArray(bufferedReader));
 
-            checkNumbArr =  checkDocNumb.arrayToValidationsDocNumbArray(readerStream.bufferedReaderToStringArray(bufferedReader));
-            for (int i = 0; i<checkNumbArr.length; i++){
-                System.out.print(checkNumbArr[i][0] + " - ");
-                System.out.println(checkNumbArr[i][1]);
+            checkedNumbArr =  checkedDocNumb.arrayToValidationsDocNumbArray(readerStream.bufferedReaderToStringArray(bufferedReader));
+            for (int i = 0; i<checkedNumbArr.length; i++){
+                System.out.print(checkedNumbArr[i][0] + " - ");
+                System.out.println(checkedNumbArr[i][1]);
             }
             bufferedReader.close();
             fileReader.close();
@@ -42,33 +44,7 @@ public class Main {
             return ;
         }
 
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("valid doc numb.txt"))) {
-            for (int i = 0; i<checkNumbArr.length; i++ ){
-                if (checkNumbArr[i][1].endsWith("valid")){
-                writer.write(checkNumbArr[i][0]+"\n");
-                    writer.flush();
-
-                }
-            }
-            writer.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("invalid doc numb.txt"))) {
-            for (int i = 0; i<checkNumbArr.length; i++ ){
-                if (!checkNumbArr[i][1].endsWith("valid")){
-                    writer.write(checkNumbArr[i][0]+" - " + checkNumbArr[i][1] + "\n");
-                    writer.flush();
-
-                }
-            }
-            writer.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
+        writeStream.writeValidDocNumbInFile(checkedNumbArr);
 
     }
 }

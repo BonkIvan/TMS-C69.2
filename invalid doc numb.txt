@@ -1,4 +1,4 @@
-docnum-12-as-23w - invalid length
-docnsm-12-as-23 - invalid beginning of the number
-docnam-12-as-23 - invalid beginning of the number
-contract-12-as-54 - invalid length
+contract-Sfd - invalid length
+contract-Pfd - invalid length
+dacnum-SSS-ghfh - invalid beginning of the number
+asd - invalid length

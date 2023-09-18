@@ -1,5 +1,6 @@
-docnum-12-as-23
-contract-12-as-
-docnumsdfsd-12-
-docnum-12-as-23
-contract-12-as-
+docnum-Sfd-ghfh - valid
+contract-Sfd-gh - valid
+docnum-P23-ghfh - valid
+docnum-P23-Ghfh - valid
+docnum-Sfd-12fh - valid
+docnum-SSS-ghfh - valid
