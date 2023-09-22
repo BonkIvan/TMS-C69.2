@@ -1,0 +1,12 @@
+docnam-88-as-23 - invalid beginning of the number
+kakayto_krakozyabra - invalid length
+docnum-12-as-23 - valid
+docnam-12-as-23 - invalid beginning of the number
+docnumsdfsd-12- - valid
+contract-32-as- - valid
+contract-15-as- - valid
+docnum-12-as-23w - invalid length
+docnsm-12-as-23 - invalid beginning of the number
+contract-12-as- - valid
+docnum-15-as-23 - valid
+contract-12-as-54 - invalid length

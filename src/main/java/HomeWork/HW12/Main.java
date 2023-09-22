@@ -18,7 +18,7 @@ public class Main {
         WriteStream writeStream = new WriteStream();
 
         try {
-            File docFile = new File("C:\\Users\\Admin\\Desktop\\Document.txt");
+            File docFile = new File("E:\\Document.txt");
             System.out.println(docFile.isFile());
             FileReader fileReader = new FileReader(docFile);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
@@ -31,10 +31,10 @@ public class Main {
             checkedDocNumb.validationNumbDocCheck(readerStream.bufferedReaderToStringArray(bufferedReader));
 
             checkedNumbArr =  checkedDocNumb.arrayToValidationsDocNumbArray(readerStream.bufferedReaderToStringArray(bufferedReader));
-            for (int i = 0; i<checkedNumbArr.length; i++){
+         /*   for (int i = 0; i<checkedNumbArr.length; i++){
                 System.out.print(checkedNumbArr[i][0] + " - ");
                 System.out.println(checkedNumbArr[i][1]);
-            }
+            }*/
             bufferedReader.close();
             fileReader.close();
 
