@@ -1,0 +1,5 @@
+docnum-12-as-23 - valid
+contract-12-as- - valid
+docnumsdfsd-12- - valid
+docnum-12-as-23 - valid
+contract-12-as- - valid

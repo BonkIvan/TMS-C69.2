@@ -46,15 +46,6 @@ public class Cycles {
     public void numSequence() {
         int i = 1;
         System.out.println(answer);
-        /*while( i <= num){
-            int x = 7;
-          int  multiple = x*i;
-            System.out.print(multiple + "  ");
-          i++;
-        }
-
-        System.out.println("---------------");*/
-
         while (i <= 100) {
             if (i % 7 == 0) {
                 System.out.print(i + " ");
